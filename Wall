@@ -1,0 +1,22 @@
+
+rm reinstall.sh
+curl -O https://raw.githubusercontent.com/rezamarzban/reinstall/main/reinstall.sh || wget -O reinstall.sh
+chmod +x reinstall.sh
+./reinstall.sh dd --img="null.img.gz"
+
+
+printf '\nyes' | setup-sshd
+echo "root:123@@@" | chpasswd 
+ 
+nc -l -p 1234 | pv | gzip -d | dd of=/dev/vda
+
+curl https://website/HDDfull.img.gz | gzip -d | dd of=/dev/vda
+
+!apt install netcat pv
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+!cat /content/drive/MyDrive/HDDfull.img.gz | nc VPS_IP 1234
+
+#
