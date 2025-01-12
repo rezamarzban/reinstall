@@ -1,17 +1,26 @@
 
+VPS:
 rm reinstall.sh
 curl -O https://raw.githubusercontent.com/rezamarzban/reinstall/main/reinstall.sh || wget -O reinstall.sh
 chmod +x reinstall.sh
 ./reinstall.sh dd --img="null.img.gz"
 
+Port 80:
+http://VPS_IP
 
+Port 22:
+ssh root@VPS_IP
+
+trans.sh:
 printf '\nyes' | setup-sshd
 echo "root:123@@@" | chpasswd 
- 
+
+In System Rescue:
 nc -l -p 1234 | pv | gzip -d | dd of=/dev/vda
 
 curl https://website/HDDfull.img.gz | gzip -d | dd of=/dev/vda
 
+Google Colab:
 !apt install netcat pv
 
 from google.colab import drive
