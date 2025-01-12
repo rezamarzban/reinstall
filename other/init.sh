@@ -191,7 +191,7 @@ find_first_interface_up() {
 configure_ip() {
         depmod
         [ -d /sys/module/ipv6 ] || modprobe ipv6
-        '/initrd-network.sh' '6d61635f616464723d310a' '697076345f616464723d320a' '697076345f676174657761793d330a' '' '' 'false'
+        '/initrd-network.sh' '' '' '' '' '' 'false'
         MAC_ADDRESS=1
         return
 	[ -n "$MAC_ADDRESS" ] && return
