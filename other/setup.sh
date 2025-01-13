@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo apt update && sudo apt install git cpio gzip gawk tar coreutils -y
+
 git clone https://github.com/rezamarzban/reinstall
 cd reinstall
 cd other
