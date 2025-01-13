@@ -34,4 +34,7 @@ drive.mount('/content/drive')
 
 !cat /content/drive/MyDrive/HDDfull.img.gz | gzip -d | nc VPS_IP 1234
 
-#
+# MOD
+# reinstall.sh: Line 1404
+# trans.sh: Last line
+
