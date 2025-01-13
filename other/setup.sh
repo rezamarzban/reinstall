@@ -35,7 +35,7 @@ zcat ../initramfs-virt | cpio -idm
 install -Dm0755 ../init.sh init
 cp ../initrd-network.sh .
 cp ../trans.sh .
-cat ../dhcpcd-openrc-10.1.0-r0.apk | tar xz --warning=no-unknown-keyword -C .
+cat ../dhcpcd-10.1.0-r0.apk | tar xz --warning=no-unknown-keyword -C .
 find . | cpio --quiet -o -H newc | gzip -1 > /reinstall-initrd
 cp ../vmlinuz-virt /reinstall-vmlinuz
 cp ../custom.cfg /boot/grub/.
