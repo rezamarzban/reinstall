@@ -1,19 +1,19 @@
-Reinstall environment from Debian 
+Reinstall environment
 
 =
 
-Rescue system from Debian 
+Rescue System
 
 =
 
-Live Alpine from Debian 
+Live Alpine
 
 =
 
-Remote Alpine from Debian 
+Remote Alpine
 
 
-Run in Debian 10:
+Run (in Debian 10):
 
 ```
 wget https://raw.githubusercontent.com/rezamarzban/reinstall/refs/heads/main/other/setup.sh
@@ -22,14 +22,14 @@ chmod +x setup.sh
 
 ```
 
-To reactivate Live Alpine at next boot, run:
+Each time, To reactivate Live Alpine (Rescue System) at next boot, run:
 
 ```
 ./reactivate.sh
 
 ```
 
-Then SSH to your server with:
+Then reboot and SSH to your server with:
 
 Username: `root`
 
