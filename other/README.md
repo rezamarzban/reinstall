@@ -1,7 +1,13 @@
-Reinstall environment 
+Reinstall environment from Debian 
 
-Rescue system 
+=
 
-Alpine Live 
+Rescue system from Debian 
 
-Remote Alpine 
+=
+
+Alpine Live from Debian 
+
+=
+
+Remote Alpine from Debian 
