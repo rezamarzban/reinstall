@@ -26,13 +26,13 @@ IP_ADDRESS=$(ip -o -f inet addr show | awk '/scope global/ {print $4; exit}') ||
 # Fetch the default gateway of the VPS
 GATEWAY=$(ip route | awk '/default/ {print $3; exit}') || { echo "Failed to fetch gateway."; exit 1; }
 
-# DNS, EXTRA, and DHCP settings (static values for now)
-DNS=''
-EXTRA=''
-USE_DHCP='false'
+# IPV6_ADDRESS, IPV6_GATEWAY, and PARAM6
+IPV6_ADDRESS=''
+IPV6_GATEWAY=''
+PARAM6='false'
 
 # Generate the replacement string for the init.sh script
-REPLACEMENT="'/initrd-network.sh' '$MAC_ADDRESS' '$IP_ADDRESS' '$GATEWAY' '$DNS' '$EXTRA' '$USE_DHCP'"
+REPLACEMENT="'/initrd-network.sh' '$MAC_ADDRESS' '$IP_ADDRESS' '$GATEWAY' '$IPV6_ADDRESS' '$IPV6_GATEWAY' '$PARAM6'"
 
 # Path to the init.sh file
 INIT_FILE="init.sh"
