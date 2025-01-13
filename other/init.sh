@@ -1063,8 +1063,6 @@ echo ""
         chmod a+x $sysroot/etc/local.d/trans.start
         ln -s /etc/init.d/local $sysroot/etc/runlevels/default/
 
-        # 配置文件夹
-        cp -r  /configs $sysroot/configs
 exec switch_root $switch_root_opts $sysroot $chart_init "$KOPT_init" $KOPT_init_args
 
 [ "$KOPT_splash" != "no" ] && echo exit > $sysroot/$splashfile
