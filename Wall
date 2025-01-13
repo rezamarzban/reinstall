@@ -21,16 +21,17 @@ printf '\nyes' | setup-sshd
 echo "root:123@@@" | chpasswd 
 
 In System Rescue:
-nc -l -p 1234 | pv | gzip -d | dd of=/dev/vda
+nc -l -p 1234 | dd of=/dev/vda status=progress
+nc -l -p 1234 | pv | dd of=/dev/vda
 
 curl https://website/HDDfull.img.gz | gzip -d | dd of=/dev/vda
 
 Google Colab:
-!apt install netcat pv
+!apt install netcat gzip
 
 from google.colab import drive
 drive.mount('/content/drive')
 
-!cat /content/drive/MyDrive/HDDfull.img.gz | nc VPS_IP 1234
+!cat /content/drive/MyDrive/HDDfull.img.gz | gzip -d | nc VPS_IP 1234
 
 #
