@@ -1,19 +1,19 @@
-Reinstall environment
+Setup Reinstall environment for VPS and so on
 
 =
 
-Rescue System
+Setup Rescue System for VPS and so on
 
 =
 
-Live Alpine
+Setup Live Alpine for VPS and so on
 
 =
 
-Remote Alpine
+Setup Remote Alpine for VPS and so on
 
 
-Run (in Debian 10):
+Run (in case if your VPS OS is Debian 10):
 
 ```
 wget https://raw.githubusercontent.com/rezamarzban/reinstall/refs/heads/main/other/setup.sh
