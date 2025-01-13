@@ -16,7 +16,7 @@ Remote Alpine from Debian
 Run in Debian 10:
 
 ```
-wget https://raw.githubusercontent.com/rezamarzban/reinstall/refs/heads/main/other/setup.s
+wget https://raw.githubusercontent.com/rezamarzban/reinstall/refs/heads/main/other/setup.sh
 chmod +x setup.sh
 ./setup.sh
 
