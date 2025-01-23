@@ -12,6 +12,7 @@ ssh root@VPS_IP
 In System Rescue:
 nc -l -p 1234 | dd of=/dev/vda status=progress
 nc -l -p 1234 | pv | dd of=/dev/vda
+nc -l -p 1234 | dd of=/dev/vda
 
 curl https://website/HDDfull.img.gz | gzip -d | dd of=/dev/vda
 
@@ -22,5 +23,6 @@ from google.colab import drive
 drive.mount('/content/drive')
 
 !cat /content/drive/MyDrive/HDDfull.img.gz | gzip -d | nc VPS_IP 1234
+!dd if=/content/drive/MyDrive/HDDfull.img.gz status=progress | nc VPS_IP 1234
 
 #
