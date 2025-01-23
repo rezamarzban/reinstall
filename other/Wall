@@ -23,3 +23,4 @@ drive.mount('/content/drive')
 
 !cat /content/drive/MyDrive/HDDfull.img.gz | gzip -d | nc VPS_IP 1234
 
+#
